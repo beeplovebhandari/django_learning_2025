@@ -27,7 +27,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'myapp',
-    'temp_inheritance'
+    'temp_inheritance',
+    'tables'
 ]
 
 MIDDLEWARE = [

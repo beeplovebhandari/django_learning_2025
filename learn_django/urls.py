@@ -5,5 +5,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("hello/", include("myapp.urls")),
      path("inherit/", include('temp_inheritance.urls')),
+    path("tables/", include ("tables.urls")),
     path("", include("myapp.urls"))
     ]
