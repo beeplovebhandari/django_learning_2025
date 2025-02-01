@@ -18,13 +18,11 @@ class Student(models.Model):
  
     
 class StudentProfile(models.Model):
-    # student = models.OneToOneField(Student, on_delete=models.CASCADE)
+    student = models.OneToOneField(Student, on_delete=models.CASCADE)
     contact = models.IntegerField()
     roll_no = models.IntegerField()
 
 
-    def __str__(self):
-        return self.item_name
     
 
 
