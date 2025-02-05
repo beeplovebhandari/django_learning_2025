@@ -7,3 +7,11 @@
 * git branch -M main
 * git remote add (# teha github ma deko hunxa yo remote link tyo copy hanne)
 * git push -u origin main
+
+
+
+
+
+***
+first ma git setup garda kheri local ma ssh key haru rakhnu parxa :
+***
