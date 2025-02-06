@@ -1,0 +1,7 @@
+
+
+   There are three types of Model Relations
+    - One-to-One Relations
+    - One-to-Many Relations
+    - Many-to-Many Relations
+
