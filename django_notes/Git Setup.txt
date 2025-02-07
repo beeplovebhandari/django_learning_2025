@@ -13,5 +13,16 @@
 
 
 ***
-first ma git setup garda kheri local ma ssh key haru rakhnu parxa :
-***
+first ma git setup garda:-
+            aafno laptop ma first time git setup garda:
+
+                (
+                    git config --global user.name "your github user name"(git hub account create garda rakheko username )
+                    git config --global user.email "your registered email"
+                )
+                yo ekchoti matra setup gare hunxa euta laptop ma
+
+
+                ani vayo ki nai vanera check garna chai : 
+                
+            ***
