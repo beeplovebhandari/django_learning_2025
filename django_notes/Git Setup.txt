@@ -24,5 +24,8 @@ first ma git setup garda:-
 
 
                 ani vayo ki nai vanera check garna chai : 
+
                 
+               " git config --global user.name
+                git config --global user.email  "
             ***
