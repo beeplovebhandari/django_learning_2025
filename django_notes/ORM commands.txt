@@ -1,0 +1,66 @@
+
+
+                    * filter student by indexing 
+
+Student.objects.all()[0:4]
+Student.objects.all()[5:7]
+
+
+
+
+
+                    * filter student age 
+
+Student.objects.filter(age__gt=25) # This shows the students greater then 25
+Student.objects.filter(age__gte=25) # This shows the students greater or equals to 25
+Student.objects.filter(age__lt=25) # This shows the students less then 18
+Student.objects.filter(age__gte=25) # This shows the students less then or equals to 18
+Student.objects.filter(age__in=[21, 20, 45, 32]) # This shows the student that's age of 21, 20, 45, 32 (this is used to get the data in bulk and can be use in other fileds like name , address ...)
+
+
+
+
+
+
+                    * filter student by the letter contains in their name
+        
+Student.objects.filter(name__contains"n") # This shows the students whose name have letter "n" at anywhere but it's case sensetive means it only shows the name where samll n is used
+Student.objects.filter(name__icontains"n") # This is same as above but that after including "i" infront of contains this became case insensitive. No matter captital or small n this shows every (n, N) in the name 
+
+
+
+
+
+
+                    * filter student by their first letter of the name 
+
+Student.objects.filter(name__startswith"M") # This shows the students whose name starts with letter "M"
+
+
+
+                    * filter student by their last letter of the name 
+
+Student.objects.filter(name__endswith"ta") # This shows the students whose name ends with letter "ta"
+
+
+
+
+                                * filter students by excluding *
+                                
+Student.objects.exclude(age=45) # This shows all the students except age 45 it exclude the students who have age 45 and this can be done in other fileds too like name...
+
+
+
+
+* Count the student *
+
+
+Student.objects.all().count() # This count all the students
+Student.objects.filter(name__startswith="j").count() # This counts the students whose name starts with j
+
+
+
+* get student by order *
+Student.objects.all().order_by('id') # This shows the students by the order of id in ascending order
+Student.objects.all().order_by('-id') # This shows the students by the order of id in decending order
+

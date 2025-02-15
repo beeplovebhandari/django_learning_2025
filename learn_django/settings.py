@@ -28,7 +28,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'myapp',
     'temp_inheritance',
-    'tables'
+    'tables',
+    'django_extensions',
+
 ]
 
 MIDDLEWARE = [

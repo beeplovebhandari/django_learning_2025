@@ -43,3 +43,13 @@ Let's take "Student" models as an example
 students = Student.objects.all()
 student = students[0]
 s.name
+
+
+{
+    Normal Case ma django shell kholne command " python manage.py shell "
+}
+
+and if we install django extensions (which make us easier to import models) by "pip install django_extensions" this command and also save this to install app of projects setting.py 
+
+and  open the sell using "python manage.py shell_plus" this command
+
