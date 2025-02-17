@@ -64,3 +64,14 @@ Student.objects.filter(name__startswith="j").count() # This counts the students 
 Student.objects.all().order_by('id') # This shows the students by the order of id in ascending order
 Student.objects.all().order_by('-id') # This shows the students by the order of id in decending order
 
+
+
+
+* update *
+Student.objects.filter(id__in=[1, 2]).update(classroom=None) # This will update the classroom of student id 1 and 2 to Null
+
+
+
+* find students
+Student.objects.filter(classroom__isnull=True) # This will show the students whose classroom is null
+Student.objects.filter(classroom__isnull=false) # This will show the students whose classroom has classroom name. 
