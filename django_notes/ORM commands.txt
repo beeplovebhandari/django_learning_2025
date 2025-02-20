@@ -75,3 +75,24 @@ Student.objects.filter(id__in=[1, 2]).update(classroom=None) # This will update 
 * find students
 Student.objects.filter(classroom__isnull=True) # This will show the students whose classroom is null
 Student.objects.filter(classroom__isnull=false) # This will show the students whose classroom has classroom name. 
+
+
+* find stuents with or & and 
+Student.objects.filter(Q(name="Jane")| Q (age=21)) # This shows all the students name of Jane and laso shows the students of age 21.
+Student.objects.filter(name="Jane", age=45) # This shows the student name of john and his age must be 45 
+
+
+ 
+                            ************************ CROSS TABLE ORM *****************************(RELATED NAME)
+
+sp = StudentProfile.objects.get(id=1)  # sp vaneko StudentProfile ko id 1 vako student ko object ho aba hamile yes bata data haru line kam garxau 
+sp.student.email() # This will show the email of StudentProfile(studentprofile object 1) id 1 ko student ko // tyo sp.student rakhnu ko karan sp vaneko studentprofile vayi ani email field chai student model ma vayera uts bata lina ko lagi tyo gareko
+s = Student.objects.get(id=1)  # s vaneko ko id 1 vako student ko object ho aba hamile yes bata data haru line kam garxau 
+s.studentprofile.roll_no   # This will show the roll no of student id 1 tyo bich ko studentprofile lekheko karan rollno studentprofile ma xa TYO RELATED NAME HO 
+
+Student.objects.filter(studentprofile__roll_no=2) # filter garda related name rakhna ni milxa 
+Student.objects.filter(studentprofile__contact=989877655) 
+
+
+ClassRoom.objects.filter(classroom_students__age=21) # This will show the student age of 25 in any of classroom
+
