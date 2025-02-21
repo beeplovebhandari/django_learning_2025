@@ -1,0 +1,22 @@
+1. pip install psycopg2 
+ ani command prompt ma gayera :
+ 2. psql -U postgres
+    password hanni ani pailai set gareko wala password one time password hunxa tyo local ma suru ma j rakhyo tei password rakhni ani :
+
+3. create database learndjangodb
+                                    #(yo command le database banxa project anusar ko bujna sajilo hune database ko nam rakhne ani last ma db lekhne (yo project learndjango vayo ani learndjangodb name rakhiyo))
+           
+            ani aba project ko settings.py ma gayera Database ma gayera yeslai set garne :
+
+4. 
+DATABASES = {
+    'default': {
+        "ENGINE': 'django.db.backends.postgresql",
+        "NAME": "learndjangodb", (aafno database ko table ko nam)
+        "USER": "postgres",
+        "PASSWORD": "aafno postgres ko password hanne",
+        "HOST": "127.0.0.1",
+        "PORT": 5432
+
+    }
+}
