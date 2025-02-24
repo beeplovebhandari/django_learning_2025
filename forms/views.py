@@ -8,6 +8,6 @@ def student_view(request):
         email = request.POST.get('email')
         address = request.POST.get('address')
         bio = request.POST.get('bio')
-        Student.objects.create(name=name, age=age, email=email, address=address, bio=bio)
+        Student.objects().create(name=name, age=age, email=email, address=address, bio=bio)
         return redirect('student')
     return render(request, template_name='forms/student_view.html')
