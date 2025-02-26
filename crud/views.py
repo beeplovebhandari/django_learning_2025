@@ -9,3 +9,12 @@ def crud_classroom(request):
         return redirect('crud_classroom')    
     classrooms = ClassRoom.objects.all()
     return render (request, template_name='crud/classroom.html', context={"classrooms": classrooms, "title": "ClassRoom"})
+
+
+
+def classroom_delete(request, id):
+    classroom = ClassRoom.objects.get(id=id)
+    if request.method == "POST":
+        classroom.delete()
+        return redirect('crud_classroom')
+    return render(request, template_name="crud/classroom_delete.html", context={"classroom": classroom})
