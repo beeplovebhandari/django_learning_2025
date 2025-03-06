@@ -61,3 +61,9 @@ def student_delete(request, id):
         student.delete()
         return redirect('crud_student')
    return render(request, template_name="crud/student_delete.html", context={"student":student})
+
+
+
+def student_detail(request, id):
+    student = Student.objects.get(id=id)
+    return render(request, template_name="crud/student_detail.html", context={"title":" Student Detail", "student": student})
